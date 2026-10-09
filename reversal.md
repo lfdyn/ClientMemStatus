@@ -1306,28 +1306,8 @@ What this reversal deliberately does not do is tell you how to defeat anything. 
 
 The direction this analysis actually supports is the defensive one, and the network side: the `PingItem` detection word that surfaces the same enforcement state on the wire, and the packed record protocols like `ClientMemStatus` that carry it.
 
-## Decompiled files
+## Decompiled
 
-I kept the longer decompilations in `docs/code/` instead of trying to explain every instruction here. The files are:
+If you want to look into this yourself, check out `sub_4E2E340`, `sub_4E2AB90`, `sub_4E2B330`, `sub_4E310C0`, `sub_4E31640`, `sub_4E31E80`, `sub_4E3ABA0`, `sub_4E3AAA0`, and `sub_4E2E120`.
 
-`ClientBlockedImage_Check.c` (`sub_4E2E340`): `0x4E2E340`.
-
-`ClientBlockedImage_Handler_Narrow\.c` (`sub_4E2AB90`): `0x4E2AB90`.
-
-`ClientBlockedImage_Fanout.c` (`sub_4E2B330`): `0x4E2B330`.
-
-`ClientBlockedImage_Broadcast.c` (`sub_4E310C0`): `0x4E310C0`.
-
-`Hyperion_CallbackListEntry_Register.c` (`sub_4E31640`): `0x4E31640`.
-
-`Hyperion_CallbackListEntry_Trampoline.c` (`sub_4E31E80`): `0x4E31E80`.
-
-`Telemetry_QevtCounter.c` (`sub_4E3ABA0`): `0x4E3ABA0`.
-
-`Telemetry_QeCounter.c` (`sub_4E3AAA0`): `0x4E3AAA0`.
-
-`Context_Singleton.c` (`sub_4E2E120`): `0x4E2E120`.
-
-`ClientMemStatus_Framing.c` (`sub_4E1A9D0`): `0x4E1A9D0`.
-
-`ClientMemStatus_Decoder.c` (`sub_4E1AE00`): `0x4E1AE00`.
+These are the main functions I looked at while reversing this. Feel free to dig into them yourself and see what you find.
